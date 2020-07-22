@@ -1,0 +1,37 @@
+Pasos a ejecutar para crear un proyecto en django:
+
+1 crear el enviroment
+para ello hay que crear un directorio y dentro del directorio ejecutar:
+python3 -m venv myvenv
+
+2 usar el enviroment: para ejecutar el enviroment hay que hacer:
+source myvenv/bin/activate
+
+3 instalar django
+hay que crear un archivo llamado requirements.txt con el contenido:
+Django~=3.0.8
+luego ejecutar: pip install -r requirements.txt
+
+4 ahora vamos a crear el proyecto en django:
+django-admin startproject nombreApp .
+
+5 ahora en la app podemos cambiar la configuracion en el archivo settings.python3
+
+6 ahora vamos a configurar la base de datos (usaremos sqlite3)
+
+7 creacion de la base de datos. ejecutar: python manage.py migrate
+
+8 crear la parte donde se gestiona el modelo: python manage.py startapp dbControlMoney
+
+9 incorporar esta nueva app en la aplicacion principal. para ello hay que ir a settings.py
+
+9 crear las tablas: python manage.py makemigrations dbControlMoney
+
+10 crear el administrador principal de la base de datos. ir a dbControlMoney/admin.py
+
+11 crear el super usuario: python manage.py createsuperuser
+
+
+--- comandos basicos
+
+iniciar el servidor: python manage.py runserver
